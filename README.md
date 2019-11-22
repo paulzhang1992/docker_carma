@@ -10,6 +10,15 @@ This is a environment for runing and testing project CARMA. The image is about 2
 - Jupyter Notebook
 
 ## Building the Docker Image
+You can pull the pre-built image from docker hub or build it yourself.
+
+For pulling image:
+```
+docker pull paulzhang1992/docker_carma
+```
+
+For build it yourself:
+
 If you are building the image off the Docker file:
 ```
 docker build [docker file dir] -t paulzhang1992/carma_docker:latest
@@ -29,7 +38,7 @@ Note -p port before : is the fowarding port on your machine. Port 8888 is for ju
 While inside the Docker container (see previous section) run this command, then navigate to: http://localhost:8888/
 
 ```bash
-cd /home    # So Jupyter Notebook uses this as it's root
+# cd /home    # This should be you default starting folder, if not change to where you mounted you project dir.
 jupyter notebook --allow-root
 ```
 
