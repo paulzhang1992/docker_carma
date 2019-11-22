@@ -27,6 +27,8 @@ RUN pip3 --no-cache-dir install \
     imageio \
     tqdm \
     xgboost
+# xgboost dependency
+RUN apt-get install -y --no-install-recommends libgomp1
 
 # Jupyter Notebook
 # Allow access from outside the container, and skip browser.
@@ -46,5 +48,5 @@ EXPOSE 6006
 # Keras 2.1.5
 RUN pip3 install --no-cache-dir --upgrade h5py pydot_ng keras
 
-WORKDIR "/root"
+WORKDIR "/home"
 CMD ["/bin/bash"]
