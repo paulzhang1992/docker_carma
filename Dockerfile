@@ -1,6 +1,8 @@
 FROM ubuntu:18.04
 MAINTAINER Paul Zhang <zzhang@shelltechworks.com>
 
+ENV PYTHONPATH "${PYTHONPATH}:/home"
+
 # Supress warnings about missing front-end. As recommended at:
 # http://stackoverflow.com/questions/22466255/is-it-possibe-to-answer-dialog-questions-when-installing-under-docker
 ARG DEBIAN_FRONTEND=noninteractive
