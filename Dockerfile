@@ -19,6 +19,7 @@ RUN apt-get install -y --no-install-recommends python3.6 python3-pip && \
 # Required libs
 RUN pip3 --no-cache-dir install \
     numpy \
+    xlrd\
     pandas \
     tensorflow-gpu==1.14 \
     scipy \
