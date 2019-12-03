@@ -21,16 +21,16 @@ For build it yourself:
 
 If you are building the image off the Docker file:
 ```
-docker build [docker file dir] -t paulzhang1992/carma_docker:latest
+docker build [docker file dir] -t paulzhang1992/docker_carma:latest
 ```
 If you are building off a github repo:
 ```
-docker build github.com/paulzhang1992/carma_docker.git -t paulzhang1992/carma_docker:latest
+docker build github.com/paulzhang1992/carma_docker.git -t paulzhang1992/docker_carma:latest
 ```
 
 ## Runing the Docker Image
 ```
-docker run -it -p 8888:8888 -p 6006:6006 -v [carma project dir]:/home paulzhang1992/carma_docker:latest
+docker run -it -p 8888:8888 -p 6006:6006 -v [carma project dir]:/home paulzhang1992/docker_carma:latest
 ```
 Note -p port before : is the fowarding port on your machine. Port 8888 is for jupyter notebook, 6666 is for tensorboard.
 
